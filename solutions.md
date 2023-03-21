@@ -75,5 +75,31 @@ console.log( items.filter((string) => {
 )
 [ 'goal', 'new', 'eat' ]
 
+// h) For the given array, filter all elements that both e && n.
+
+let items = ['goal', 'new', 'user', 'sit', 'eat', 'dinner'];
+
+
+
+console.log( items.filter((string) => {
+          return ( /e/.test(string) && /n/.test(string)  )
+       }) 
+)
+
+[ 'new', 'dinner' ]
+
+
+// i) For the given string, replace 0xA0 with 0x7F and 0xC0 with 0x1F.
+
+ let ip = 'start address: 0xA0, func1 address: 0xC0'
+ 
+ const pattern1 = new RegExp("0xA0")
+ const pattern2 = new RegExp("0xC0")
+ 
+ ip = ip.replace(pattern1, "0x7F")
+ ip = ip.replace(pattern2, "0x1F")
+ console.log(ip)
+
+start address: 0x7F, func1 address: 0x1F
 
 
