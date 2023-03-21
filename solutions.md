@@ -33,6 +33,7 @@ d. Replace all occurrences of 5 with five for the given string.
 
  let ip = 'This note should not be NoTeD'
  
+ 
  const regex = new RegExp("note", "ig");
  
  console.log( ip.replace( regex, "X"))
@@ -101,5 +102,23 @@ console.log( items.filter((string) => {
  console.log(ip)
 
 start address: 0x7F, func1 address: 0x1F
+
+// a) Check if the given input strings contain is or the as whole words.
+
+let str1 = 'is; (this)'
+let str2 = "The food isn't good"
+let str3 = 'the2 cats'
+let str4 = 'switch on the light'
+
+const regex = new RegExp("(\\bis\\b|\\bthe\\b)")
+
+const array = [str1,str2,str3,str4]
+    array.forEach((string) => {
+        console.log( regex.test(string) )
+    }) // T F F T
+ 
+
+    
+
 
 
